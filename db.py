@@ -1,4 +1,4 @@
-from sqlalchemy import create_engine, text
+from sqlalchemy import create_engine, text, URL
 from sqlalchemy.orm import sessionmaker, declarative_base
 
 DATABASE_URL = "mysql+mysqldb://jai:admin123@localhost/common_contributions_tracker"
@@ -18,16 +18,3 @@ def get_db():
     finally:
         db.close()
 
-
-
-# Check Database Connection
-# def check_db_connection():
-#     try:
-#         # Create a session and execute a simple query
-#         with SessionLocal() as session:
-#             result = session.execute(text("SELECT 1")).scalar()
-#         print("Database connection successful!")
-#         print(result)
-#     except Exception as e:
-#         print(f"Database connection failed: {e}")
-#         return None
