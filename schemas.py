@@ -52,6 +52,13 @@ class ContributionCreate(ContributionBase):
 class Contribution(ContributionBase):
     id: int
 
+class ContriburionUpdate(BaseModel):
+    event_id: Optional[int] - None
+    name: Optional[str] = None
+    address: Optional[str] = None
+    amount: Optional[str] = None
+    mobile_number: Optional[str] = None
+
 
 class Config:
     orm_mode = True
