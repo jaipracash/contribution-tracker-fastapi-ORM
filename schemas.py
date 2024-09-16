@@ -13,6 +13,13 @@ class UserCreate(UserBase):
 class User(UserBase):
     id: int
 
+class UserUpdate(BaseModel):
+    name: optional[str] = None
+    dob: optional[str] = None
+    email: optional[str] = None
+    address: optional[str] = None
+    mobile_number: optional[str] = None
+
 class EventBase(BaseModel):
     user_id: int
     name: str
