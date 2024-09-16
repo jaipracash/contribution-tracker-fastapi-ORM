@@ -32,6 +32,12 @@ class EventCreate(EventBase):
 class Event(EventBase):
     id: int
 
+class EventUpdate(BaseModel):
+    user_id: Optional[str] = None
+    name: Optional[str] = None
+    date: Optional[str] = None
+    location: Optional[str] = None
+
 
 class ContributionBase(BaseModel):
     event_id: int
