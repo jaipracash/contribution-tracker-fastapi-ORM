@@ -28,7 +28,7 @@ def delete_events(db: Session, event_id: int):
     else:
         return {"msg": "Event not found"}
 
-def update_events(db: Session, event_id: int, event: schemas.UserUpdate):
+def update_events(db: Session, event_id: int, event: schemas.EventUpdate):
     db_item = db.query(models.Events).filter(models.Events.id == event_id)
     if db_item:
         update_data = event.dict(exclude_unset=True)
