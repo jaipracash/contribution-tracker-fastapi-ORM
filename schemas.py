@@ -14,11 +14,11 @@ class User(UserBase):
     id: int
 
 class UserUpdate(BaseModel):
-    name: optional[str] = None
-    dob: optional[str] = None
-    email: optional[str] = None
-    address: optional[str] = None
-    mobile_number: optional[str] = None
+    name: Optional[str] = None
+    dob: Optional[str] = None
+    email: Optional[str] = None
+    address: Optional[str] = None
+    mobile_number: Optional[str] = None
 
 class EventBase(BaseModel):
     user_id: int
