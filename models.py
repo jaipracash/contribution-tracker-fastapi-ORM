@@ -1,14 +1,14 @@
 from sqlalchemy import Column, ForeignKey, Integer, String
 from sqlalchemy.orm import relationship
 from db import Base
-from datetime import datetime
+from datetime import date
 
 class Users(Base):
     _tablename_ = 'users'
 
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String(100), nullable = False, index=True)
-    dob = Column(Date)
+    dob = Column(date)
     email = Column(String(250), nullable=False, unique=True)
     address = Column(String(250))
     mobile_number = Column(String(10), unique=True)
