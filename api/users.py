@@ -27,7 +27,7 @@ def delete_item(db: Session, user_id: int):
 def update_user(db: Session, user_id = int, user = schemas.UserUpdate):
     db_item = db.query(models.Users).filter(models.Users.id == user_id).first()
     if db_item:
-        update_data = item.dict(exclude_unset=True)
+        update_data = user.dict(exclude_unset=True)
 
         for key, value in update_data.items():
             setattr(db_item, key, value)
